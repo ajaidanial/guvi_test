@@ -13,42 +13,11 @@ import {
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import { ExpandMore, Notifications } from '@material-ui/icons'
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    boxShadow: 'none'
-  },
-  flexGrow: {
-    flexGrow: 1
-  },
-  avatar: {
-    width: 45,
-    height: 45
-  },
-  award1: {
-    width: 'auto',
-    height: 30
-  },
-  dividerFull: {
-    height: 48
-  },
-  dividerHalf: {
-    height: 22
-  },
-  topbarWidgetSpacing: {},
-  text: {
-    color: 'white'
-  },
-  levelImg: {
-    width: 'auto',
-    height: 30
-  }
-}))
+import { styles } from './styles'
 
 const Topbar = (props) => {
   const { className, onSidebarOpen, ...rest } = props
-
-  const classes = useStyles()
+  const classes = makeStyles(styles)()
 
   return (
     <AppBar {...rest} className={clsx(classes.root, className)}>
@@ -56,12 +25,12 @@ const Topbar = (props) => {
         <div className={classes.flexGrow} />
         {/* section 1 start */}
         <img
-          alt="Global Logo"
-          className={clsx(classes.levelImg, classes.topbarWidgetSpacing)}
+          alt="Logo 1"
+          className={clsx(classes.image2, classes.widgetSpacing)}
           src="images/thunder.png"
         />
         <Typography
-          className={clsx(classes.text, classes.topbarWidgetSpacing)}
+          className={clsx(classes.text, classes.widgetSpacing)}
           component="h5"
           variant="h5"
         >
@@ -72,11 +41,11 @@ const Topbar = (props) => {
         <Divider className={classes.dividerHalf} orientation="vertical" />
         <img
           alt="Global Logo"
-          className={clsx(classes.levelImg, classes.topbarWidgetSpacing)}
+          className={clsx(classes.image2, classes.widgetSpacing)}
           src="images/global.png"
         />
         <Typography
-          className={clsx(classes.text, classes.topbarWidgetSpacing)}
+          className={clsx(classes.text, classes.widgetSpacing)}
           component="h5"
           variant="h5"
         >
@@ -86,7 +55,7 @@ const Topbar = (props) => {
         {/* section 3 start */}
         <Divider className={classes.dividerHalf} orientation="vertical" />
         <Typography
-          className={clsx(classes.text, classes.topbarWidgetSpacing)}
+          className={clsx(classes.text, classes.widgetSpacing)}
           component="h5"
           variant="h5"
         >
@@ -96,7 +65,7 @@ const Topbar = (props) => {
         {/* section 4 start */}
         <Divider className={classes.dividerHalf} orientation="vertical" />
         <Typography
-          className={clsx(classes.text, classes.topbarWidgetSpacing)}
+          className={clsx(classes.text, classes.widgetSpacing)}
           component="h5"
           variant="h5"
         >
@@ -104,35 +73,26 @@ const Topbar = (props) => {
         </Typography>
         <img
           alt="Level"
-          className={clsx(classes.levelImg, classes.topbarWidgetSpacing)}
+          className={clsx(classes.image2, classes.widgetSpacing)}
           src="images/number1.png"
         />
         <img
           alt="Topbar Award"
-          className={clsx(classes.award1, classes.topbarWidgetSpacing)}
+          className={clsx(classes.image2, classes.widgetSpacing)}
           src="images/award1.png"
         />
         {/* section 4 end */}
         {/* section 5 start */}
         <Divider className={classes.dividerFull} orientation="vertical" />
-        <IconButton
-          className={classes.topbarWidgetSpacing}
-          color="inherit"
-          onClick={() => alert('notifications')}
-        >
+        <IconButton className={classes.widgetSpacing} color="inherit">
           <Notifications />
         </IconButton>
         <Avatar
           alt="Account"
-          className={clsx(classes.avatar, classes.topbarWidgetSpacing)}
-          onClick={() => alert('avatar')}
+          className={clsx(classes.image1, classes.widgetSpacing)}
           src="images/avatars/1.png"
         />
-        <IconButton
-          className={classes.topbarWidgetSpacing}
-          color="inherit"
-          onClick={() => alert('dropdown')}
-        >
+        <IconButton className={classes.widgetSpacing} color="inherit">
           <ExpandMore />
         </IconButton>
         {/* section 5 end */}

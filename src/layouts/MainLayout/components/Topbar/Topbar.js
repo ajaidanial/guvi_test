@@ -26,52 +26,59 @@ const Topbar = (props) => {
       <Toolbar>
         <div className={classes.flexGrow} />
 
-        {/* section 1 start */}
-        <IconWithLabel
-          imgAlt="Thunder Logo"
-          imgSrc="images/thunder.png"
-          label="122"
-        />
+        {/* make other contents invisible for smaller screens */}
+        <Hidden lgDown>
+          {/* section 1 start */}
+          <IconWithLabel
+            imgAlt="Thunder Logo"
+            imgSrc="images/thunder.png"
+            label="122"
+          />
+          {/* section 2 start */}
+          <Divider
+            className={clsx(classes.dividerHalf, classes.widgetMargin)}
+          />
+          <IconWithLabel
+            className={classes.widgetMargin}
+            imgAlt="Global Logo"
+            imgSrc="images/global.png"
+            label="123485"
+          />
+          {/* section 3 start */}
+          <Divider
+            className={clsx(classes.dividerHalf, classes.widgetMargin)}
+          />
+          <IconWithLabel
+            className={classes.widgetMargin}
+            header="Rank"
+            label="1233233"
+            onlyText
+          />
+          {/* section 4 start */}
+          <Divider
+            className={clsx(classes.dividerHalf, classes.widgetMargin)}
+          />
+          <Typography className={classes.widgetMargin}>Level</Typography>
+          <ShieldWithNumber className={classes.widgetMargin} />
+          <Medal className={classes.widgetMargin} />
+          {/* section 5 start */}
+          <Divider
+            className={clsx(classes.dividerFull, classes.widgetMargin)}
+          />
+          <IconButton className={classes.widgetMargin} size="small">
+            <Notifications />
+          </IconButton>
+          <Avatar
+            alt="Avatar"
+            className={clsx(classes.avatar, classes.widgetMargin)}
+            src="images/avatar.png"
+          />
+          <IconButton className={classes.widgetMargin} size="small">
+            <KeyboardArrowDown />
+          </IconButton>
+        </Hidden>
 
-        {/* section 2 start */}
-        <Divider className={clsx(classes.dividerHalf, classes.widgetMargin)} />
-        <IconWithLabel
-          className={classes.widgetMargin}
-          imgAlt="Global Logo"
-          imgSrc="images/global.png"
-          label="123485"
-        />
-
-        {/* section 3 start */}
-        <Divider className={clsx(classes.dividerHalf, classes.widgetMargin)} />
-        <IconWithLabel
-          className={classes.widgetMargin}
-          header="Rank"
-          label="1233233"
-          onlyText
-        />
-
-        {/* section 4 start */}
-        <Divider className={clsx(classes.dividerHalf, classes.widgetMargin)} />
-        <Typography className={classes.widgetMargin}>Level</Typography>
-        <ShieldWithNumber className={classes.widgetMargin} />
-        <Medal className={classes.widgetMargin} />
-
-        {/* section 5 start */}
-        <Divider className={clsx(classes.dividerFull, classes.widgetMargin)} />
-        <IconButton className={classes.widgetMargin} size="small">
-          <Notifications />
-        </IconButton>
-        <Avatar
-          alt="Avatar"
-          className={clsx(classes.avatar, classes.widgetMargin)}
-          src="images/avatar.png"
-        />
-        <IconButton className={classes.widgetMargin} size="small">
-          <KeyboardArrowDown />
-        </IconButton>
-
-        {/* for smaller screens | toggler button */}
+        {/* make toggler button visible for smaller screens */}
         <Hidden lgUp>
           <IconButton color="inherit" onClick={onSidebarOpen}>
             <MenuIcon />

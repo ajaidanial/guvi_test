@@ -22,25 +22,20 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const Main = (props) => {
+const MainLayout = (props) => {
   const { children } = props
-
   const classes = useStyles()
   const theme = useTheme()
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'), {
     defaultMatches: true
   })
-
   const [openSidebar, setOpenSidebar] = useState(false)
-
   const handleSidebarOpen = () => {
     setOpenSidebar(true)
   }
-
   const handleSidebarClose = () => {
     setOpenSidebar(false)
   }
-
   const shouldOpenSidebar = isDesktop ? true : openSidebar
 
   return (
@@ -64,8 +59,8 @@ const Main = (props) => {
   )
 }
 
-Main.propTypes = {
+MainLayout.propTypes = {
   children: PropTypes.node
 }
 
-export default Main
+export default MainLayout

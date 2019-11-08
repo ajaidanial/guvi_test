@@ -3,7 +3,7 @@ import { Switch, Redirect } from 'react-router-dom'
 
 // view helpers
 import PublicLayoutRoute from './PublicLayoutRoute'
-import { Main as MainLayout, Minimal as MinimalLayout } from '../layouts'
+import { MainLayout } from '../layouts'
 
 // app views
 import { HomeView, NotFoundView } from '../views'
@@ -22,7 +22,7 @@ const Routes = () => {
       <PublicLayoutRoute
         component={NotFoundView}
         exact
-        layout={MinimalLayout}
+        layout={MainLayout}
         path="/not-found"
       />
       <Redirect to="/not-found" />
@@ -31,5 +31,3 @@ const Routes = () => {
 }
 
 export default Routes
-
-// TODO: Protected Routes

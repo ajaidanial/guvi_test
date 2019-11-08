@@ -1,5 +1,4 @@
 import React from 'react'
-import clsx from 'clsx'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
 import { Divider, Drawer } from '@material-ui/core'
@@ -10,7 +9,7 @@ import HomeOutlined from '@material-ui/icons/HomeOutlined'
 import SettingsOutlined from '@material-ui/icons/SettingsOutlined'
 import AssignmentTurnedInOutlined from '@material-ui/icons/AssignmentTurnedInOutlined'
 
-import { Profile, SidebarNav } from './components'
+import { Logo, SidebarNav } from './components'
 
 const useStyles = makeStyles((theme) => ({
   drawer: {
@@ -29,17 +28,12 @@ const useStyles = makeStyles((theme) => ({
   },
   divider: {
     margin: theme.spacing(2, 0)
-  },
-  nav: {
-    marginBottom: theme.spacing(2)
   }
 }))
 
 const Sidebar = (props) => {
-  const { open, variant, onClose, className, ...rest } = props
-
+  const { open, variant, onClose, ...rest } = props
   const classes = useStyles()
-
   const pages = [
     {
       title: 'Dashboard',
@@ -76,17 +70,16 @@ const Sidebar = (props) => {
       open={open}
       variant={variant}
     >
-      <div {...rest} className={clsx(classes.root, className)}>
-        <Profile />
+      <div {...rest} className={classes.root}>
+        <Logo />
         <Divider className={classes.divider} />
-        <SidebarNav className={classes.nav} pages={pages} />
+        <SidebarNav pages={pages} />
       </div>
     </Drawer>
   )
 }
 
 Sidebar.propTypes = {
-  className: PropTypes.string,
   onClose: PropTypes.func,
   open: PropTypes.bool.isRequired,
   variant: PropTypes.string.isRequired

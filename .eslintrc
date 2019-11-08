@@ -50,5 +50,7 @@
     "experimentalObjectRestSpread": true
   },
   "plugins": ["react"],
-  "globals": { "require": true }
+  "globals": {
+    "require": true
+  }
 }

@@ -10,7 +10,7 @@ const Topbar = (props) => {
   const classes = makeStyles(styles)()
 
   return (
-    <AppBar {...rest}>
+    <AppBar className={classes.root} color="white" {...rest}>
       <Toolbar>
         <div className={classes.flexGrow} />
         {/* TODO: Topbar contents here */}

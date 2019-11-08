@@ -1,10 +1,16 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
-import { Typography, Link } from '@material-ui/core'
+import { Typography, Link, Divider } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: theme.spacing(4)
+    padding: theme.spacing(4),
+    paddingTop: 0
+  },
+  divider: {
+    height: 1,
+    width: '100%',
+    marginBottom: theme.spacing(4)
   }
 }))
 
@@ -15,6 +21,7 @@ const Footer = (props) => {
 
   return (
     <div {...rest} className={classes.root}>
+      <Divider className={classes.divider} />
       <Typography variant="body1">
         &copy;{' '}
         <Link

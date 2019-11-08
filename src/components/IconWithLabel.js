@@ -2,21 +2,21 @@ import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import { Typography } from '@material-ui/core'
 import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center',
-    padding: `${theme.spacing(1)}px 10px`
+    alignItems: 'center'
   },
   image: {
-    width: 40,
+    width: 35,
     height: 'auto',
-    padding: theme.spacing(0, 1)
+    paddingRight: theme.spacing(1)
   },
   header: {
-    padding: theme.spacing(0, 1)
+    paddingRight: theme.spacing(1)
   },
   text: {}
 }))
@@ -29,18 +29,18 @@ const useStyles = makeStyles((theme) => ({
  */
 export default function IconWithLabel(props) {
   const classes = useStyles()
-  const { imgAlt, header, imgSrc, label, onlyText } = props
+  const { className, imgAlt, header, imgSrc, label, onlyText } = props
 
   if (!onlyText)
     return (
-      <div className={classes.root}>
+      <div className={clsx(classes.root, className)}>
         <img alt={imgAlt} className={classes.image} src={imgSrc} />
         <Typography className={classes.text}>{label}</Typography>
       </div>
     )
   else
     return (
-      <div className={classes.root}>
+      <div className={clsx(classes.root, className)}>
         <Typography className={classes.header}>{header} :</Typography>
         <Typography className={classes.text}>{label}</Typography>
       </div>
@@ -48,6 +48,7 @@ export default function IconWithLabel(props) {
 }
 
 IconWithLabel.propTypes = {
+  className: PropTypes.any,
   imgAlt: PropTypes.string,
   imgSrc: PropTypes.string,
   label: PropTypes.string.isRequired,

@@ -5,5 +5,20 @@ export const styles = (theme) => ({
   },
   root: {
     boxShadow: 'none'
+  },
+  avatar: {
+    height: 45,
+    width: 45
+  },
+  widgetMargin: {
+    marginLeft: theme.spacing(3)
+  },
+  dividerFull: {
+    height: 48,
+    width: 1
+  },
+  dividerHalf: {
+    height: 24,
+    width: 1
   }
 })

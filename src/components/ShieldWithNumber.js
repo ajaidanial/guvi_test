@@ -2,10 +2,10 @@ import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import { Typography } from '@material-ui/core'
 import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: `${theme.spacing(1)}px 10px`,
     position: 'relative'
   },
   image: {
@@ -14,8 +14,8 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     position: 'absolute',
-    top: 18,
-    left: 19
+    top: 12,
+    left: 10
   }
 }))
 
@@ -24,10 +24,10 @@ const useStyles = makeStyles((theme) => ({
  */
 export default function ShieldWithNumber(props) {
   const classes = useStyles()
-  const { label } = props
+  const { className, label } = props
 
   return (
-    <div className={classes.root}>
+    <div className={clsx(classes.root, className)}>
       <img
         alt="Guvi Shield"
         className={classes.image}
@@ -39,6 +39,7 @@ export default function ShieldWithNumber(props) {
 }
 
 ShieldWithNumber.propTypes = {
+  className: PropTypes.any,
   label: PropTypes.string
 }
 

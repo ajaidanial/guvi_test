@@ -1,11 +1,10 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    padding: `${theme.spacing(1)}px 10px`
-  },
+  root: {},
   image: {
     width: 40,
     height: 'auto'
@@ -17,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
  */
 export default function Medal(props) {
   const classes = useStyles()
-  const { type } = props
+  const { className, type } = props
 
   let medalImage
   switch (type) {
@@ -35,7 +34,7 @@ export default function Medal(props) {
   }
 
   return (
-    <div className={classes.root}>
+    <div className={clsx(classes.root, className)}>
       <img
         alt="Guvi Medal"
         className={classes.image}
@@ -46,6 +45,7 @@ export default function Medal(props) {
 }
 
 Medal.propTypes = {
+  className: PropTypes.any,
   type: PropTypes.string
 }
 

@@ -20,7 +20,10 @@ const useStyles = makeStyles((theme) => ({
     textTransform: 'none',
     letterSpacing: 0,
     width: '100%',
-    fontWeight: theme.typography.fontWeightMedium
+    fontWeight: theme.typography.fontWeightMedium,
+    borderLeft: '6px solid transparent',
+    borderRight: '6px solid transparent',
+    borderRadius: 0
   },
   icon: {
     color: theme.palette.icon,
@@ -31,8 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   active: {
     color: theme.palette.primary.main,
-    borderColor: theme.palette.primary.main,
-    borderLeft: '6px solid',
+    borderLeft: `6px solid ${theme.palette.primary.main}`,
     fontWeight: theme.typography.fontWeightMedium,
     '& $icon': {
       color: theme.palette.primary.main

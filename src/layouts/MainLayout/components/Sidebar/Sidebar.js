@@ -1,33 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
-import { Divider, Drawer } from '@material-ui/core'
+import { Drawer } from '@material-ui/core'
 // Icons for the sidebar
-import AlarmOutlined from '@material-ui/icons/AlarmOutlined'
-import MonetizationOnOutlined from '@material-ui/icons/MonetizationOnOutlined'
-import HomeOutlined from '@material-ui/icons/HomeOutlined'
-import SettingsOutlined from '@material-ui/icons/SettingsOutlined'
-import AssignmentTurnedInOutlined from '@material-ui/icons/AssignmentTurnedInOutlined'
-
+import {
+  AlarmOutlined,
+  MonetizationOnOutlined,
+  HomeOutlined,
+  SettingsOutlined,
+  AssignmentTurnedInOutlined,
+  PhoneInTalkSharp,
+  CastForEducation,
+  Android,
+  InsertPhoto
+} from '@material-ui/icons'
 import { Logo, SidebarNav } from './components'
 
 const useStyles = makeStyles((theme) => ({
   drawer: {
-    width: 240,
-    [theme.breakpoints.up('lg')]: {
-      marginTop: 64,
-      height: 'calc(100% - 64px)'
-    }
+    width: 100,
+    height: '100%'
   },
   root: {
     backgroundColor: theme.palette.white,
     display: 'flex',
     flexDirection: 'column',
-    height: '100%',
-    padding: theme.spacing(2)
-  },
-  divider: {
-    margin: theme.spacing(2, 0)
+    height: '100%'
   }
 }))
 
@@ -36,28 +34,48 @@ const Sidebar = (props) => {
   const classes = useStyles()
   const pages = [
     {
-      title: 'Dashboard',
-      href: '/dashboard',
+      title: 'Home',
+      href: '/home',
       icon: <HomeOutlined />
     },
     {
-      title: 'Transactions',
-      href: '/transactions',
+      title: 'Test 1',
+      href: '/t1',
       icon: <MonetizationOnOutlined />
     },
     {
-      title: 'Tasks',
-      href: '/tasks',
+      title: 'Test 2',
+      href: '/t2',
       icon: <AssignmentTurnedInOutlined />
     },
     {
-      title: 'Reminders',
-      href: '/reminders',
+      title: 'Test 3',
+      href: '/t3',
       icon: <AlarmOutlined />
     },
     {
-      title: 'Settings',
-      href: '/settings',
+      title: 'Test 4',
+      href: '/t4',
+      icon: <PhoneInTalkSharp />
+    },
+    {
+      title: 'Test 5',
+      href: '/t5',
+      icon: <CastForEducation />
+    },
+    {
+      title: 'Test 6',
+      href: '/t6',
+      icon: <Android />
+    },
+    {
+      title: 'Test 7',
+      href: '/t7',
+      icon: <InsertPhoto />
+    },
+    {
+      title: 'Test 8',
+      href: '/t8',
       icon: <SettingsOutlined />
     }
   ]
@@ -72,7 +90,6 @@ const Sidebar = (props) => {
     >
       <div {...rest} className={classes.root}>
         <Logo />
-        <Divider className={classes.divider} />
         <SidebarNav pages={pages} />
       </div>
     </Drawer>

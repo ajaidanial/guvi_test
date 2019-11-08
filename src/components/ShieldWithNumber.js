@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 /**
- * A component which renders the medal along with the number.
+ * A component which renders the shield along with the `number`.
  */
 export default function ShieldWithNumber(props) {
   const classes = useStyles()

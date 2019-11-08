@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
-import { AppBar, Toolbar, Hidden, IconButton } from '@material-ui/core'
+import { AppBar, Toolbar, Hidden, IconButton, Divider } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
+import { IconWithLabel } from '../../../../components'
 import { styles } from './styles'
 
 const Topbar = (props) => {

@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
-import { TabPanel } from './components'
+import { TabPanel, Notes, Summary, Activity } from './components'
 import { styles } from './styles'
 
 function a11yProps(index) {
@@ -40,13 +40,13 @@ export default function CourseTabs() {
       </AppBar>
       {/* Content */}
       <TabPanel className={classes.tabPanel} value={openTab} index={0}>
-        Item One
+        <Notes />
       </TabPanel>
       <TabPanel className={classes.tabPanel} value={openTab} index={1}>
-        Item Two
+        <Summary />
       </TabPanel>
       <TabPanel className={classes.tabPanel} value={openTab} index={2}>
-        Item Three
+        <Activity />
       </TabPanel>
     </div>
   )

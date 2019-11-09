@@ -27,7 +27,7 @@ const Topbar = (props) => {
         <div className={classes.flexGrow} />
 
         {/* make other contents invisible for smaller screens */}
-        <Hidden lgDown>
+        <Hidden mdDown>
           {/* section 1 start */}
           <IconWithLabel
             imgAlt="Thunder Logo"

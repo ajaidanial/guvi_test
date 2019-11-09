@@ -6,8 +6,7 @@ import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import { TabPanel } from './components'
-import { yellow } from '@material-ui/core/colors'
-import { height } from '@material-ui/system'
+import { styles } from './styles'
 
 function a11yProps(index) {
   return {
@@ -16,43 +15,8 @@ function a11yProps(index) {
   }
 }
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: 'transparent'
-  },
-  appBar: {
-    boxShadow: 'none',
-    background: 'none',
-    color: 'black',
-    borderBottom: '1px solid rgba(0, 0, 0, 0.12)'
-  },
-  tabs: {
-    '& > div': {
-      '& > span': {
-        backgroundColor: '#2AE88A',
-        height: 4
-      }
-    }
-  },
-  tab: {
-    textTransform: 'none',
-    textAlign: 'left',
-    padding: 0,
-    minWidth: 0,
-    marginRight: theme.spacing(4)
-  },
-  tabPanel: {
-    background: 'white',
-    marginTop: theme.spacing(3),
-    boxShadow:
-      '0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)',
-    borderRadius: 4
-  }
-}))
-
 export default function CourseTabs() {
-  const classes = useStyles()
+  const classes = makeStyles(styles)()
   // to take care of the tab operations
   const [openTab, setOpenTab] = React.useState(0)
   const handleChange = (event, newValue) => {

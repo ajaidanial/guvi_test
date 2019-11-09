@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   divider: {
     height: 1,
     width: '100%',
-    marginBottom: theme.spacing(4)
+    marginBottom: theme.spacing(3)
   }
 }))
 

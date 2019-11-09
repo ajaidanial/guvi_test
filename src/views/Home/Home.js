@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { styles } from './styles'
 import { withStyles } from '@material-ui/styles'
 import PropTypes from 'prop-types'
+import { VideoSection } from './components'
 
 export class Home extends Component {
   render() {
@@ -9,7 +10,7 @@ export class Home extends Component {
 
     return (
       <div className={classes.root}>
-        <div>Home</div>
+        <VideoSection />
       </div>
     )
   }

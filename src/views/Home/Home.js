@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { styles } from './styles'
 import { withStyles } from '@material-ui/styles'
 import PropTypes from 'prop-types'
-import { VideoSection } from './components'
+import { VideoSection, CourseTabs } from './components'
+import { Grid } from '@material-ui/core'
 
 export class Home extends Component {
   render() {
@@ -10,7 +11,17 @@ export class Home extends Component {
 
     return (
       <div className={classes.root}>
-        <VideoSection />
+        <Grid container spacing={4}>
+          <Grid item md={12} xs={12}>
+            <VideoSection />
+          </Grid>
+          <Grid item md={8} xs={12}>
+            <CourseTabs />
+          </Grid>
+          <Grid item md={4} xs={12}>
+            Accordians
+          </Grid>
+        </Grid>
       </div>
     )
   }

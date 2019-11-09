@@ -6,7 +6,9 @@ const useStyles = makeStyles((theme) => ({
   textField: {
     width: '100%'
   },
-  button: {},
+  button: {
+    textTransform: 'none'
+  },
   btnContainer: {
     width: '100%',
     padding: 0,

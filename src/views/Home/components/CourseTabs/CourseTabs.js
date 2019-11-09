@@ -41,6 +41,13 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
     minWidth: 0,
     marginRight: theme.spacing(4)
+  },
+  tabPanel: {
+    background: 'white',
+    marginTop: theme.spacing(3),
+    boxShadow:
+      '0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)',
+    borderRadius: 4
   }
 }))
 
@@ -68,13 +75,13 @@ export default function CourseTabs() {
         </Tabs>
       </AppBar>
       {/* Content */}
-      <TabPanel value={openTab} index={0}>
+      <TabPanel className={classes.tabPanel} value={openTab} index={0}>
         Item One
       </TabPanel>
-      <TabPanel value={openTab} index={1}>
+      <TabPanel className={classes.tabPanel} value={openTab} index={1}>
         Item Two
       </TabPanel>
-      <TabPanel value={openTab} index={2}>
+      <TabPanel className={classes.tabPanel} value={openTab} index={2}>
         Item Three
       </TabPanel>
     </div>

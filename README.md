@@ -8,8 +8,8 @@ A page or two done for the interview selection. Built with react and material-UI
 
 `cd guvi_test`
 
+`cp .env.example .env`
+
 `npm install`
 
 `npm start`
-
-If something goes wrong `cp .env.example .env`

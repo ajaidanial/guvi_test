@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { styles } from './styles'
 import { withStyles } from '@material-ui/styles'
 import PropTypes from 'prop-types'
-import { VideoSection, CourseTabs } from './components'
+import { VideoSection, CourseTabs, TableOfContent } from './components'
 import { Grid } from '@material-ui/core'
 
 export class Home extends Component {
@@ -19,7 +19,7 @@ export class Home extends Component {
             <CourseTabs />
           </Grid>
           <Grid item md={4} xs={12}>
-            Accordians
+            <TableOfContent />
           </Grid>
         </Grid>
       </div>

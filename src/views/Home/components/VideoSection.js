@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
   },
   marginRight: {
     marginRight: theme.spacing(2)
+  },
+  bold: {
+    fontWeight: 'bold'
   }
 }))
 
@@ -39,14 +42,18 @@ export default function VideoSection() {
           size="large"
           startIcon={<Share />}
         >
-          <Typography variant="h5">Share</Typography>
+          <Typography className={classes.bold} variant="h5">
+            Share
+          </Typography>
         </Button>
         <Button
           className={classes.button}
           size="large"
           startIcon={<Bookmark />}
         >
-          <Typography variant="h5">Bookmark</Typography>
+          <Typography className={classes.bold} variant="h5">
+            Bookmark
+          </Typography>
         </Button>
       </div>
       <Card className={classes.card}>

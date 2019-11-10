@@ -10,7 +10,9 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import PropTypes from 'prop-types'
 
 const useStyles = makeStyles((theme) => ({
-  heading: {},
+  heading: {
+    fontWeight: 'bold'
+  },
   expansionPanelSummary: {
     padding: '4px 20px',
     '&.Mui-expanded': {

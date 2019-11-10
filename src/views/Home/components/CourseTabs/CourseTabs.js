@@ -36,17 +36,29 @@ export default function CourseTabs() {
         >
           <Tab
             className={classes.tab}
-            label={<Typography variant="h5">Notes</Typography>}
+            label={
+              <Typography className={classes.bold} variant="h5">
+                Notes
+              </Typography>
+            }
             {...a11yProps(0)}
           />
           <Tab
             className={classes.tab}
-            label={<Typography variant="h5">Summary</Typography>}
+            label={
+              <Typography className={classes.bold} variant="h5">
+                Summary
+              </Typography>
+            }
             {...a11yProps(1)}
           />
           <Tab
             className={classes.tab}
-            label={<Typography variant="h5">Activity</Typography>}
+            label={
+              <Typography className={classes.bold} variant="h5">
+                Activity
+              </Typography>
+            }
             {...a11yProps(2)}
           />
         </Tabs>

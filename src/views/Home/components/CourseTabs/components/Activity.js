@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
   text: {
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3)
+  },
+  bold: {
+    fontWeight: 'bold'
   }
 }))
 
@@ -27,7 +30,7 @@ export default function Activity() {
     <>
       <div className={classes.btnContainer}>
         <Button className={classes.button} color="primary" variant="text">
-          <Typography>View All Qestions</Typography>
+          <Typography className={classes.bold}>View All Qestions</Typography>
         </Button>
       </div>
       <Typography className={classes.text} variant="h5">
@@ -35,7 +38,7 @@ export default function Activity() {
       </Typography>
       <div className={classes.btnContainer}>
         <Button className={classes.button} color="primary" variant="contained">
-          <Typography>Next</Typography>
+          <Typography className={classes.bold}>Next</Typography>
         </Button>
       </div>
     </>

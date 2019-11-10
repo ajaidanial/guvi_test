@@ -57,8 +57,10 @@ export default function TableOFContent() {
   return (
     <div className={classes.root}>
       <Card className={classes.card}>
-        <CardContent class>
-          <Typography variant="h5">Table Of Content</Typography>
+        <CardContent className={classes.cardContent}>
+          <Typography className={classes.heading} variant="h5">
+            Table Of Content
+          </Typography>
         </CardContent>
       </Card>
       {data.map((singleData) => (

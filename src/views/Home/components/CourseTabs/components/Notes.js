@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
     marginTop: theme.spacing(3),
     textAlign: 'right'
+  },
+  bold: {
+    fontWeight: 'bold'
   }
 }))
 
@@ -32,7 +35,7 @@ export default function Notes() {
 
       <div className={classes.btnContainer}>
         <Button className={classes.button} color="primary" variant="contained">
-          <Typography>Save</Typography>
+          <Typography className={classes.bold}>Save</Typography>
         </Button>
       </div>
     </>

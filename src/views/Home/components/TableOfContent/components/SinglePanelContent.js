@@ -53,7 +53,10 @@ const useStyles = makeStyles((theme) => ({
   green: {
     color: '#2AE88A'
   },
-  default: {
+  defaultText: {
+    opacity: '0.7'
+  },
+  defaultIcon: {
     color: 'rgba(0, 0, 0, 0.12)'
   },
   black: {
@@ -83,7 +86,7 @@ export default function SinglePanelContent(props) {
         <TickIcon
           className={clsx(
             classes.icon,
-            completed ? classes.green : classes.default
+            completed ? classes.green : classes.defaultIcon
           )}
         />
         <Divider
@@ -103,7 +106,7 @@ export default function SinglePanelContent(props) {
         <Typography
           className={clsx(
             classes.text,
-            isActive ? classes.black : classes.default
+            isActive ? classes.black : classes.defaultText
           )}
         >
           {label}

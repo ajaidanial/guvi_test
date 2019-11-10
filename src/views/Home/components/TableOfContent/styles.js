@@ -11,7 +11,7 @@ export const styles = (theme) => ({
   },
   card: {
     marginBottom: theme.spacing(1),
-    padding: `${theme.spacing(4)}px 20px`,
+    padding: '25px 20px',
     borderRadius: 0
   }
 })

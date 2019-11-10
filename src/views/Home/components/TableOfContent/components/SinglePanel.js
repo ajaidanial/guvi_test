@@ -12,7 +12,7 @@ import PropTypes from 'prop-types'
 const useStyles = makeStyles((theme) => ({
   heading: {},
   expansionPanelSummary: {
-    padding: `${theme.spacing(1)}px 20px`,
+    padding: '4px 20px',
     '&.Mui-expanded': {
       borderBottom: '1px solid rgba(0, 0, 0, 0.12)'
     }
@@ -33,7 +33,9 @@ export function SinglePanel(props) {
         className={classes.expansionPanelSummary}
         expandIcon={<ExpandMoreIcon />}
       >
-        <Typography className={classes.heading}>{title}</Typography>
+        <Typography className={classes.heading} variant="h6">
+          {title}
+        </Typography>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails>{children}</ExpansionPanelDetails>
     </ExpansionPanel>

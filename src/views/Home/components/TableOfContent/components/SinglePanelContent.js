@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'rgba(0, 0, 0, 0.12)',
     position: 'absolute',
     top: 0,
+    left: 5,
     marginLeft: '-2px'
   },
   dividerFirst: {
@@ -41,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     position: 'absolute',
     top: '50%',
+    left: 5,
     marginLeft: '-13px',
     marginTop: '-13px',
     zIndex: 1000,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Button, CardMedia } from '@material-ui/core'
+import { Card, Button, CardMedia, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import { Share, Bookmark } from '@material-ui/icons'
 import clsx from 'clsx'
@@ -39,14 +39,14 @@ export default function VideoSection() {
           size="large"
           startIcon={<Share />}
         >
-          Share
+          <Typography variant="h5">Share</Typography>
         </Button>
         <Button
           className={classes.button}
           size="large"
           startIcon={<Bookmark />}
         >
-          Bookmark
+          <Typography variant="h5">Bookmark</Typography>
         </Button>
       </div>
       <Card className={classes.card}>

@@ -27,13 +27,15 @@ export default function Activity() {
     <>
       <div className={classes.btnContainer}>
         <Button className={classes.button} color="primary" variant="text">
-          View All Qestions
+          <Typography>View All Qestions</Typography>
         </Button>
       </div>
-      <Typography className={classes.text}>Q1. Test content here...</Typography>
+      <Typography className={classes.text} variant="h5">
+        Q1. Test content here...
+      </Typography>
       <div className={classes.btnContainer}>
         <Button className={classes.button} color="primary" variant="contained">
-          Next
+          <Typography>Next</Typography>
         </Button>
       </div>
     </>

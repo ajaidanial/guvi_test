@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextField, Button } from '@material-ui/core'
+import { TextField, Button, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 
 const useStyles = makeStyles((theme) => ({
@@ -32,7 +32,7 @@ export default function Notes() {
 
       <div className={classes.btnContainer}>
         <Button className={classes.button} color="primary" variant="contained">
-          Save
+          <Typography>Save</Typography>
         </Button>
       </div>
     </>

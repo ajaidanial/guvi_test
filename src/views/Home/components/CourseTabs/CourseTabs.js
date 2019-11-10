@@ -7,6 +7,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import { TabPanel, Notes, Summary, Activity } from './components'
 import { styles } from './styles'
+import { Typography } from '@material-ui/core'
 
 function a11yProps(index) {
   return {
@@ -33,9 +34,21 @@ export default function CourseTabs() {
           onChange={handleChange}
           aria-label="simple tabs example"
         >
-          <Tab className={classes.tab} label="Notes" {...a11yProps(0)} />
-          <Tab className={classes.tab} label="Summary" {...a11yProps(1)} />
-          <Tab className={classes.tab} label="Activity" {...a11yProps(2)} />
+          <Tab
+            className={classes.tab}
+            label={<Typography variant="h5">Notes</Typography>}
+            {...a11yProps(0)}
+          />
+          <Tab
+            className={classes.tab}
+            label={<Typography variant="h5">Summary</Typography>}
+            {...a11yProps(1)}
+          />
+          <Tab
+            className={classes.tab}
+            label={<Typography variant="h5">Activity</Typography>}
+            {...a11yProps(2)}
+          />
         </Tabs>
       </AppBar>
       {/* Content */}

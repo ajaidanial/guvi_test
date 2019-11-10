@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
     height: 1,
     width: '100%',
     marginBottom: theme.spacing(3)
+  },
+  bold: {
+    fontWeight: 'bold'
   }
 }))
 
@@ -25,6 +28,7 @@ const Footer = (props) => {
       <Typography variant="body1">
         &copy;{' '}
         <Link
+          className={classes.bold}
           component="a"
           href="https://ajaidanial.github.io/"
           target="_blank"

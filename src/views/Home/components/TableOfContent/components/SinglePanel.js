@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
 export function SinglePanel(props) {
   const classes = useStyles()
-  const { className, expanded, handleChange, id, title } = props
+  const { className, children, expanded, handleChange, id, title } = props
 
   return (
     <ExpansionPanel
@@ -35,9 +35,7 @@ export function SinglePanel(props) {
       >
         <Typography className={classes.heading}>{title}</Typography>
       </ExpansionPanelSummary>
-      <ExpansionPanelDetails>
-        <Typography>...</Typography>
-      </ExpansionPanelDetails>
+      <ExpansionPanelDetails>{children}</ExpansionPanelDetails>
     </ExpansionPanel>
   )
 }

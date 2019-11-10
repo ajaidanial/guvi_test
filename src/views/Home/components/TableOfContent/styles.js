@@ -5,7 +5,8 @@ export const styles = (theme) => ({
   singlePanel: {
     marginBottom: theme.spacing(1),
     '&.Mui-expanded': {
-      marginBottom: theme.spacing(1)
+      marginBottom: theme.spacing(1),
+      marginTop: theme.spacing(1)
     }
   },
   card: {

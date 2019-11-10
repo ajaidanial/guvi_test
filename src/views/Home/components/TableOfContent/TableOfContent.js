@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { styles } from './styles'
-import { SinglePanel } from './components'
+import { SinglePanel, SinglePanelContent } from './components'
 import { Card, CardContent, Typography } from '@material-ui/core'
 
 export default function TableOFContent() {
@@ -16,27 +16,27 @@ export default function TableOFContent() {
     {
       title: 'Beginner Module',
       id: 'panel1',
-      children: '...'
+      children: <SinglePanelContent />
     },
     {
       title: 'Intermediate Module',
       id: 'panel2',
-      children: '...'
+      children: <Typography>...</Typography>
     },
     {
       title: 'Advance Module',
       id: 'panel3',
-      children: '...'
+      children: <Typography>...</Typography>
     },
     {
       title: 'Any One Project',
       id: 'panel4',
-      children: '...'
+      children: <Typography>...</Typography>
     },
     {
       title: 'Final Assessment',
       id: 'panel5',
-      children: '...'
+      children: <Typography>...</Typography>
     }
   ]
 

@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import PropTypes from 'prop-types'
 
+// Panel to render the Tabs in the `CourseTabs.js`
 export default function TabPanel(props) {
   const { children, value, index, ...other } = props
 

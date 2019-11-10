@@ -9,6 +9,7 @@ import { TabPanel, Notes, Summary, Activity } from './components'
 import { styles } from './styles'
 import { Typography } from '@material-ui/core'
 
+// to render the necessary desc and id for the Tabs | `helper`
 function a11yProps(index) {
   return {
     id: `course-tab-${index}`,

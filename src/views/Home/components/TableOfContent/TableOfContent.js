@@ -13,6 +13,7 @@ export default function TableOFContent() {
     setExpanded(isExpanded ? panel : false)
   }
 
+  // data for the side accordian
   const data = [
     {
       title: 'Beginner Module',

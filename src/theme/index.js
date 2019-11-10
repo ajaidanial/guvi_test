@@ -9,5 +9,3 @@ const theme = createMuiTheme({
   overrides
 })
 export default theme
-
-// TODO: customize the material ui theme here

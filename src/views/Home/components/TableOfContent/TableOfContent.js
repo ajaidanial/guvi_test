@@ -2,7 +2,8 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { styles } from './styles'
 import { SinglePanel, SinglePanelContent } from './components'
-import { Card, CardContent, Typography } from '@material-ui/core'
+import { Card, CardContent, Typography, Grid } from '@material-ui/core'
+import { singlePanelData } from './data'
 
 export default function TableOFContent() {
   const classes = makeStyles(styles)()
@@ -16,7 +17,20 @@ export default function TableOFContent() {
     {
       title: 'Beginner Module',
       id: 'panel1',
-      children: <SinglePanelContent />
+      children: (
+        <Grid container>
+          {singlePanelData.map((singleData) => (
+            <SinglePanelContent
+              completed={singleData.completed}
+              isActive={singleData.isActive}
+              isFirst={singleData.isFirst}
+              isLast={singleData.isLast}
+              key={singleData.id}
+              label={singleData.label}
+            />
+          ))}
+        </Grid>
+      )
     },
     {
       title: 'Intermediate Module',

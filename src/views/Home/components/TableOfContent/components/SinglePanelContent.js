@@ -56,6 +56,10 @@ const useStyles = makeStyles((theme) => ({
   },
   black: {
     color: 'rgba(0, 0, 0)'
+  },
+  // utilities
+  borderNone: {
+    borderBottom: 'none'
   }
 }))
 
@@ -69,7 +73,7 @@ function TickIcon(props) {
 
 export default function SinglePanelContent(props) {
   const classes = useStyles()
-  const { completed, isActive, isFirst, isLast } = props
+  const { completed, isActive, isFirst, isLast, label } = props
 
   return (
     <Grid className={classes.container} container>
@@ -88,14 +92,19 @@ export default function SinglePanelContent(props) {
           )}
         />
       </Grid>
-      <Grid className={classes.item2} item md={11} xs={11}>
+      <Grid
+        className={clsx(classes.item2, isLast && classes.borderNone)}
+        item
+        md={11}
+        xs={11}
+      >
         <Typography
           className={clsx(
             classes.text,
             isActive ? classes.black : classes.default
           )}
         >
-          Test, what and why
+          {label}
         </Typography>
       </Grid>
     </Grid>
@@ -106,12 +115,14 @@ SinglePanelContent.propTypes = {
   completed: PropTypes.bool,
   isActive: PropTypes.bool,
   isFirst: PropTypes.bool,
-  isLast: PropTypes.bool
+  isLast: PropTypes.bool,
+  label: PropTypes.string
 }
 
 SinglePanelContent.defaultProps = {
   completed: false,
   isActive: false,
   isFirst: false,
-  isLast: false
+  isLast: false,
+  label: 'Test'
 }

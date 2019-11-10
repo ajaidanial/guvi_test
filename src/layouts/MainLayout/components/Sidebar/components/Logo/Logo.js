@@ -8,12 +8,11 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     minHeight: 'fit-content',
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(2)
+    paddingTop: 10
   },
   logo: {
-    width: 55,
-    height: 55
+    width: 45,
+    height: 45
   }
 }))
 

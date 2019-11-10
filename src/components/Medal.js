@@ -6,7 +6,7 @@ import clsx from 'clsx'
 const useStyles = makeStyles((theme) => ({
   root: {},
   image: {
-    width: 40,
+    width: 35,
     height: 'auto'
   }
 }))

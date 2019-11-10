@@ -9,13 +9,13 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative'
   },
   image: {
-    width: 40,
+    width: 35,
     height: 'auto'
   },
   text: {
     position: 'absolute',
-    top: 12,
-    left: 10
+    top: 9,
+    left: 8
   }
 }))
 

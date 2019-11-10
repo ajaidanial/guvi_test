@@ -7,11 +7,14 @@ import { makeStyles } from '@material-ui/styles'
 import { List, ListItem, Button, colors } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
+  root: {
+    paddingTop: 10
+    // paddingTop: 10
+  },
   item: {
     display: 'flex',
-    paddingTop: 4,
-    paddingBottom: 4
+    paddingTop: 0,
+    paddingBottom: 6
   },
   button: {
     color: colors.blueGrey[800],

@@ -3,6 +3,7 @@ import React from 'react'
 import { Grid, Typography, Divider, SvgIcon } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import clsx from 'clsx'
+import PropTypes from 'prop-types'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -30,6 +31,13 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     marginLeft: '-2px'
   },
+  dividerFirst: {
+    height: '50%',
+    top: '50%'
+  },
+  dividerLast: {
+    height: '50%'
+  },
   icon: {
     position: 'absolute',
     top: '50%',
@@ -38,13 +46,17 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 1000,
     backgroundColor: 'white'
   },
-  iconGreen: {
+  text: {},
+  // colors
+  green: {
     color: '#2AE88A'
   },
-  iconDefault: {
+  default: {
     color: 'rgba(0, 0, 0, 0.12)'
   },
-  text: {}
+  black: {
+    color: 'rgba(0, 0, 0)'
+  }
 }))
 
 function TickIcon(props) {
@@ -55,18 +67,51 @@ function TickIcon(props) {
   )
 }
 
-export default function SinglePanelContent() {
+export default function SinglePanelContent(props) {
   const classes = useStyles()
+  const { completed, isActive, isFirst, isLast } = props
 
   return (
     <Grid className={classes.container} container>
       <Grid className={classes.item1} item md={1} xs={1}>
-        <TickIcon className={clsx(classes.icon, classes.iconDefault)} />
-        <Divider className={classes.divider} />
+        <TickIcon
+          className={clsx(
+            classes.icon,
+            completed ? classes.green : classes.default
+          )}
+        />
+        <Divider
+          className={clsx(
+            classes.divider,
+            isFirst && classes.dividerFirst,
+            isLast && classes.dividerLast
+          )}
+        />
       </Grid>
       <Grid className={classes.item2} item md={11} xs={11}>
-        <Typography className={classes.text}>Test, what and why</Typography>
+        <Typography
+          className={clsx(
+            classes.text,
+            isActive ? classes.black : classes.default
+          )}
+        >
+          Test, what and why
+        </Typography>
       </Grid>
     </Grid>
   )
+}
+
+SinglePanelContent.propTypes = {
+  completed: PropTypes.bool,
+  isActive: PropTypes.bool,
+  isFirst: PropTypes.bool,
+  isLast: PropTypes.bool
+}
+
+SinglePanelContent.defaultProps = {
+  completed: false,
+  isActive: false,
+  isFirst: false,
+  isLast: false
 }

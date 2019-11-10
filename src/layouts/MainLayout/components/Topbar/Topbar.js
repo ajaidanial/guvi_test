@@ -24,6 +24,12 @@ const Topbar = (props) => {
   return (
     <AppBar className={classes.root} color="white" {...rest}>
       <Toolbar>
+        <Avatar
+          alt="Guvi Logo"
+          className={classes.avatar}
+          src="images/logo.png"
+        />
+
         <div className={classes.flexGrow} />
 
         {/* make other contents invisible for smaller screens */}
